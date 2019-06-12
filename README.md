@@ -23,6 +23,8 @@ func getSSID() -> String? {
 }
 ```
 
+>To use `CNCopyCurrentNetworkInfo()` in iOS 12 and later, enable the Access WiFi Information capability in Xcode. For more information, see [Access WiFi Information Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_networking_wifi-info).
+
 ## CNCopyCurrentNetworkInfo() returns nil on iOS 13
 
 Watch WWDC19 Session 713: [Advances in Networking, Part 2](https://developer.apple.com/videos/play/wwdc2019/713/).
@@ -88,3 +90,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     ...
 }
 ```
+
+## Update your app
+
+If your app uses `CNCopyCurrentNetworkInfo()` and needs to solve the issue. Solve it now. There's no need to wait for Xcode 11 GM. The solution above is Xcode 10 compatible.
