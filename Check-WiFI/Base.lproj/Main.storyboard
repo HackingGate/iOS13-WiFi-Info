@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,19 +28,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BSSID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYH-Bt-v3a">
+                                <rect key="frame" x="20" y="165" width="48" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BSSID Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wt-oo-2hL">
+                                <rect key="frame" x="300" y="165" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="b6q-jv-jBs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4zQ-5w-XfH"/>
-                            <constraint firstItem="sHa-sS-Yf2" firstAttribute="centerY" secondItem="b6q-jv-jBs" secondAttribute="centerY" id="Bi6-Kh-aOc"/>
-                            <constraint firstItem="sHa-sS-Yf2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Kim-8x-HIi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1wt-oo-2hL" secondAttribute="trailing" constant="20" id="58u-mV-T4K"/>
                             <constraint firstItem="b6q-jv-jBs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="LZr-8j-uT7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sHa-sS-Yf2" secondAttribute="trailing" constant="20" id="P0S-V3-3mM"/>
                             <constraint firstItem="sHa-sS-Yf2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b6q-jv-jBs" secondAttribute="trailing" constant="20" id="PmN-iF-wAC"/>
+                            <constraint firstItem="bYH-Bt-v3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zuq-fP-Bse"/>
+                            <constraint firstItem="1wt-oo-2hL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bYH-Bt-v3a" secondAttribute="trailing" constant="20" id="gfD-W8-cIs"/>
+                            <constraint firstItem="sHa-sS-Yf2" firstAttribute="firstBaseline" secondItem="b6q-jv-jBs" secondAttribute="firstBaseline" id="o5D-Ew-7to"/>
+                            <constraint firstItem="1wt-oo-2hL" firstAttribute="firstBaseline" secondItem="bYH-Bt-v3a" secondAttribute="firstBaseline" id="pcD-LY-ez2"/>
+                            <constraint firstItem="bYH-Bt-v3a" firstAttribute="top" secondItem="b6q-jv-jBs" secondAttribute="bottom" constant="20" id="psP-xH-cV3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bssidLabel" destination="1wt-oo-2hL" id="Nmw-oP-4If"/>
                         <outlet property="ssidLabel" destination="sHa-sS-Yf2" id="F7M-Tg-ykd"/>
                     </connections>
                 </viewController>

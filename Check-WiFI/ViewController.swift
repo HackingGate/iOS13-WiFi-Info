@@ -19,6 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     @IBOutlet weak var ssidLabel: UILabel!
+    @IBOutlet weak var bssidLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateWiFi() {
         ssidLabel.text = currentNetworkInfos?.first?.ssid
+        bssidLabel.text = currentNetworkInfos?.first?.bssid
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
