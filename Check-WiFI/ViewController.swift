@@ -58,10 +58,10 @@ public class SSID {
                                               success: false,
                                               ssid: nil,
                                               bssid: nil)
-                if let dict = CFBridgingRetain(CNCopyCurrentNetworkInfo(interfaceName as CFString)) {
+                if let dict = CNCopyCurrentNetworkInfo(interfaceName as CFString) as NSDictionary? {
                     networkInfo.success = true
-                    networkInfo.ssid = dict["SSID"] as? String
-                    networkInfo.bssid = dict["BSSID"] as? String
+                    networkInfo.ssid = dict[kCNNetworkInfoKeySSID as String] as? String
+                    networkInfo.bssid = dict[kCNNetworkInfoKeyBSSID as String] as? String
                 }
                 networkInfos.append(networkInfo)
             }
