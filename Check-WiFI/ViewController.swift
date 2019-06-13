@@ -38,6 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func updateWiFi() {
+        print("SSID: \(currentNetworkInfos?.first?.ssid ?? "")")
         ssidLabel.text = currentNetworkInfos?.first?.ssid
         bssidLabel.text = currentNetworkInfos?.first?.bssid
     }

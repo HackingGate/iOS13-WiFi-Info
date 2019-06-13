@@ -57,6 +57,7 @@ Function to update UI
 
 ```swift
 func updateWiFi() {
+    print("SSID: \(currentNetworkInfos?.first?.ssid)")
     ssidLabel.text = getSSID()
 }
 ```
