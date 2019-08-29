@@ -1,7 +1,7 @@
 # iOS13-WiFi-Info
-Fix CNCopyCurrentNetworkInfo() does NOT work on iOS13
+Fix CNCopyCurrentNetworkInfo() does NOT work in iOS13 and later
 
-## Get Wi-Fi SSID on iOS 12 or earlier
+## Get Wi-Fi SSID in iOS 12 and earlier
 
 [stackoverflow](https://stackoverflow.com/a/37856496/4063462)
 
@@ -25,7 +25,7 @@ func getSSID() -> String? {
 
 >To use `CNCopyCurrentNetworkInfo()` in iOS 12 and later, enable the Access WiFi Information capability in Xcode. For more information, see [Access WiFi Information Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_networking_wifi-info).
 
-## CNCopyCurrentNetworkInfo() returns nil on iOS 13
+## CNCopyCurrentNetworkInfo() returns nil in iOS 13 and later
 
 Watch WWDC19 Session 713: [Advances in Networking, Part 2](https://developer.apple.com/videos/play/wwdc2019/713/).
 
@@ -45,7 +45,7 @@ Must also meet at least one of criteria below
 
 Otherwise, returns `nil`
 
-## Get Wi-Fi SSID on iOS 13 or later
+## Get Wi-Fi SSID in iOS 13 and later
 
 Import [Core Location](https://developer.apple.com/documentation/corelocation) framework
 
